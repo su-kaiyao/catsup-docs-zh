@@ -113,7 +113,6 @@ Catsup 可以被很自由的定制，但你只要改几个设置就可以让你�
 
 你需要一个叫做 `YOUR_GITHUB_USERNAME.github.io` 的 repo 。 如果你还没有，现在去 `创建一个 <https://github.com/repositories/new>`_ 吧。
 
-
 然后修改你的配置文件， 将 ``deploy`` 部分改成这样 ::
 
     "deploy": {
@@ -127,6 +126,16 @@ Catsup 可以被很自由的定制，但你只要改几个设置就可以让你�
     },
 
 用你的 GitHub 用户名（ 比如 ``whtsky`` ） 替换掉 ``YOUR_GITHUB_USERNAME`` 。
+
+然后，进入到刚刚生成站点步骤里面生成的deploy文件夹，添加 ``YOUR_GITHUB_USERNAME.github.io`` 项目的git本地仓库 ::
+
+    cd deploy
+    git init
+    git remote add origin git@github.com:YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME.github.io.git
+
+在切换回主目录 ::
+
+    cd ..
 
 在这之后，让我们把站点部署到 GitHub Pages 上 ::
 
